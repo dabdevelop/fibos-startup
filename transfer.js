@@ -53,4 +53,4 @@ function transferFO(from, to, amount){
 }
 
 transferEOS("orangeisfeng", "orangeisfeng", 1);
-transferFO("orangeisfeng", "wrathionfibo", 63060);
+transferFO("orangeisfeng", "wrathionfibo", 1000);

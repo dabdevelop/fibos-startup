@@ -44,7 +44,7 @@ client.transaction(tr => {
     tr.buyrambytes({
       payer: 'orangeisfeng',
       receiver: 'fibosamerica',
-      bytes: 409600
+      bytes: 4096
     })
     
     tr.delegatebw({

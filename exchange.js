@@ -49,7 +49,7 @@ if(rs.rows.length > 0){
         });
     } else {
         // FO => EOS
-        result = ctx.exchangeSync("orangeisfeng", "100000.0000 FO@eosio", "0.0000 EOS@eosio", "exchange FO to EOS", {
+        result = ctx.exchangeSync("orangeisfeng", "10000.0000 FO@eosio", "0.0000 EOS@eosio", "exchange FO to EOS", {
             authorization: "orangeisfeng"
         });
     }

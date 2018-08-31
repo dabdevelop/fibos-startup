@@ -34,7 +34,7 @@ var config = {
 var client = FIBOS(config);
 
 client.contract('eosio').then(eosio => {
-    eosio.sellram('orangeisfeng', 200*1024*1024).then((result) => {
+    eosio.sellram('orangeisfeng', 4*1024).then((result) => {
         console.log(result);
     }).catch((err) => {
       console.log(err);
