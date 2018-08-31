@@ -24,7 +24,9 @@ if (fs.exists(fibos.data_dir) || fs.exists(fibos.config_dir)) {
 }
 
 fibos.load("http", {
-	"http-server-address": "0.0.0.0:8870"
+    "http-server-address": "0.0.0.0:8870",
+    "access-control-allow-origin": "*",
+    "http-validate-host": false
 });
 
 fibos.load("net", {
