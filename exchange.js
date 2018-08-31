@@ -7,7 +7,12 @@ var FIBOS = require("fibos.js");
 var key = {
     "public-key": "FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2",
     "private-key": "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP"
-}
+};
+
+// true: EOS => FO  false: FO => EOS
+var eosToFO = true;
+var account = "orangeisfeng";
+var amount = 1;
 
 var rpc = ["http://se-rpc.fibos.io:8870",
             "http://sl-rpc.fibos.io:8870",
@@ -33,10 +38,10 @@ var config = {
 
 var client = FIBOS(config);
 
-var rs = client.getTableRowsSync(true, "eosio.token", "orangeisfeng", "accounts");
+var rs = client.getTableRowsSync(true, "eosio.token", account, "accounts");
 console.log(rs);
 
-var eosToFO = true;
+
 
 
 if(rs.rows.length > 0){
@@ -44,13 +49,13 @@ if(rs.rows.length > 0){
     var result;
     if(eosToFO){
         // EOS => FO
-        result = ctx.exchangeSync("orangeisfeng", "100.0000 EOS@eosio", "0.0000 FO@eosio", "exchange EOS to FO", {
-            authorization: "orangeisfeng"
+        result = ctx.exchangeSync(account, amount.toFixed(4) + " EOS@eosio", "0.0000 FO@eosio", "exchange EOS to FO", {
+            authorization: account
         });
     } else {
         // FO => EOS
-        result = ctx.exchangeSync("orangeisfeng", "10000.0000 FO@eosio", "0.0000 EOS@eosio", "exchange FO to EOS", {
-            authorization: "orangeisfeng"
+        result = ctx.exchangeSync(account, amount.toFixed(4) + " FO@eosio", "0.0000 EOS@eosio", "exchange FO to EOS", {
+            authorization: account
         });
     }
     console.log(result);

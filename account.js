@@ -9,6 +9,8 @@ var key = {
     "private-key": "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP"
 }
 
+var account = "orangeisfeng";
+
 var rpc = ["http://se-rpc.fibos.io:8870",
             "http://sl-rpc.fibos.io:8870",
             "http://to-rpc.fibos.io:8870",
@@ -33,14 +35,15 @@ var config = {
 
 var client = FIBOS(config);
 
-var rs = client.getTableRowsSync(true, "eosio.token", "orangeisfeng", "accounts");
+
+// 查询账号余额
+var rs = client.getTableRowsSync(true, "eosio.token", account, "accounts");
 console.log(rs);
 
-var rs = client.getAccountSync("fibosamerica");
+// // 查询账号权限、资源等信息
+var rs = client.getAccountSync(account);
 console.log(rs);
 
+// // 查询BP信息
 var rs = client.getProducersSync(true, '', 10);
-console.log(rs);
-
-var rs = client.getCurrencyStatsSync('eosio.token', 'FO@eosio');
 console.log(rs);

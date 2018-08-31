@@ -9,6 +9,9 @@ var key = {
     "private-key": "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP"
 }
 
+var account = "orangeisfeng";
+var bytes = 4096;
+
 var rpc = ["http://se-rpc.fibos.io:8870",
             "http://sl-rpc.fibos.io:8870",
             "http://to-rpc.fibos.io:8870",
@@ -35,9 +38,9 @@ var client = FIBOS(config);
 
 client.transaction(tr => {
     tr.buyrambytes({
-      payer: 'orangeisfeng',
-      receiver: 'orangeisfeng',
-      bytes: 4096
+      payer: account,
+      receiver: account,
+      bytes: bytes
     })
   }).then((result) => {
       console.log(result);
