@@ -6,7 +6,8 @@
 
 ### 前提
 
-    前提是安装了[Fibos](https://fibos.io/docs/guide/basic/install.md.html)，快速安装：
+前提是安装了[Fibos](https://fibos.io/docs/guide/basic/install.md.html)，快速安装：
+
 ```bash
     curl -s https://fibos.io/download/installer.sh |sh
 ```
