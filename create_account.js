@@ -34,10 +34,25 @@ var config = {
 var client = FIBOS(config);
 
 client.transaction(tr => {
+    tr.newaccount({
+        creator: 'orangeisfeng',
+        name: 'fibosamerica',
+        owner: "FO6jr4vHBXzZmDuPLEFrNHdS8ZiqgNeABQ76vkBZvEnVUHPuyrYt",
+        active: "FO6jr4vHBXzZmDuPLEFrNHdS8ZiqgNeABQ76vkBZvEnVUHPuyrYt"
+      })
+
     tr.buyrambytes({
       payer: 'orangeisfeng',
-      receiver: 'orangeisfeng',
+      receiver: 'fibosamerica',
       bytes: 4096
+    })
+    
+    tr.delegatebw({
+      from: 'fibosamerica',
+      receiver: 'fibosamerica',
+      stake_net_quantity: '1.0000 FO@eosio',
+      stake_cpu_quantity: '10.0000 FO@eosio',
+      transfer: 0
     })
   }).then((result) => {
       console.log(result);
