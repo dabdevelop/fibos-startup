@@ -4,15 +4,21 @@
 
 var FIBOS = require("fibos.js");
 
+// 替换成你的公钥和私钥
 var key = {
     "public-key": "FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2",
     "private-key": "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP"
 }
 
-var creator = "orangeisfeng";
-var name = "fibosamerica";
+// 替换 fromaccount 为你的账号，替换 newaccount 为你准备创建的账号
+// ** 替换 owner 和 active 两个地方的 FO6jr4vHBXzZmDuPLEFrNHdS8ZiqgNeABQ76vkBZvEnVUHPuyrYt 为 newaccount 的公钥
+// bytes 为购买内存的字节数量
+// stakeNET 是抵押 NET 的 FO 数量，stakeCPU 是抵押 CPU 的 FO 数量
+var creator = "fromaccount";
+var name = "newaccount";
 var owner = "FO6jr4vHBXzZmDuPLEFrNHdS8ZiqgNeABQ76vkBZvEnVUHPuyrYt";
 var active = "FO6jr4vHBXzZmDuPLEFrNHdS8ZiqgNeABQ76vkBZvEnVUHPuyrYt";
+var bytes = 4 * 1024;
 var stakeNET = 1;
 var stakeCPU = 10;
 
@@ -51,7 +57,7 @@ client.transaction(tr => {
     tr.buyrambytes({
       payer: creator,
       receiver: name,
-      bytes: 4096
+      bytes: bytes
     })
     
     tr.delegatebw({

@@ -3,6 +3,7 @@
 // Fibos密钥对生成工具地址：https://fibos.xyz/
 
 var FIBOS = require('fibos.js');
+
 // 替换 keyProvider 为你的私钥
 var fibos = FIBOS({
 	chainId: "6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",

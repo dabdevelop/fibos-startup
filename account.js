@@ -4,12 +4,14 @@
 
 var FIBOS = require("fibos.js");
 
+// 替换成你的公钥和私钥
 var key = {
     "public-key": "FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2",
     "private-key": "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP"
 }
 
-var account = "orangeisfeng";
+// 替换 fromaccount 为你的账号
+var account = "fromaccount";
 
 var rpc = ["http://se-rpc.fibos.io:8870",
             "http://sl-rpc.fibos.io:8870",

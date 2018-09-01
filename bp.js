@@ -4,6 +4,7 @@
 
 var fibos = require('fibos');
 var fs = require("fs");
+// 替换成你的账号，公钥和私钥
 var config = {
 	"producer-name": "fibosamerica",
 	"public-key": "FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2",

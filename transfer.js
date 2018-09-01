@@ -1,6 +1,8 @@
 // 私钥：5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP
 // 公钥：FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2
+
 // Fibos密钥对生成工具地址：https://fibos.xyz/
+// 第一次使用请少量尝试，然后在浏览器查看执行结果确认：http://explorer.fibos.rocks/
 
 var FIBOS = require("fibos.js");
 
@@ -52,5 +54,8 @@ function transferFO(from, to, amount){
     console.log(result);
 }
 
-transferEOS("orangeisfeng", "orangeisfeng", 1);
-transferFO("orangeisfeng", "wrathionfibo", 1000);
+// 把 EOS@FO 转到 EOS@EOS，fromaccount 是 FO 的主网账号，toaccount 是EOS主网账号
+transferEOS("fromaccount", "toaccount", 1);
+
+// 把 FO@FO 转到 FO@FO，fromaccount 是 FO 的主网账号，toaccount 是 FO 的主网账号
+// transferFO("fromaccount", "toaccount", 1);

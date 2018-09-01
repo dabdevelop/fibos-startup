@@ -3,10 +3,10 @@
 // Fibos密钥对生成工具地址：https://fibos.xyz/
 
 var FIBOS = require('fibos.js');
-// 替换xxxprivatekey 为你的私钥
+// 替换 xxxprivatekey 为你的私钥
 var fibos = FIBOS({
 	chainId: "6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",
-	keyProvider: "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP",
+	keyProvider: "xxxprivatekey",
 	httpEndpoint: "http://se-rpc.fibos.io:8870",
 	logger: {
 		log: null,
@@ -15,5 +15,6 @@ var fibos = FIBOS({
 });
 var ctx = fibos.contractSync("eosio");
 // 替换xxxaccount 为你的账号名
-var rs = ctx.voteproducerSync("fibosamerica", "", ["fibosamerica"]);
+// 第三个参数是您投票的节点，如果是多个节点，需要按照字母排序，如果字母一样，比较后一位，以此类推
+var rs = ctx.voteproducerSync("xxxaccount", "", ["fibosamerica", "fibosrockskr"]);
 console.log(rs);
