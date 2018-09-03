@@ -1,14 +1,22 @@
 var FIBOS = require("fibos.js");
 
-function initClient(_keyProvider) {
+// 在 key.json 文件里替换成你的公钥和私钥
+var key = require("./key.json");
+var rpc = require("./rpc.json");
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function initClient() {
     return FIBOS({
-        chainId: "cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f",
-        keyProvider: _keyProvider, 
-        httpEndpoint: "http://127.0.0.1:8888",
-        logger: {
-            log: null,
-            error: null
-        }
+        chainId:"6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",
+        keyProvider:key["private-key"],
+        httpEndpoint:rpc[getRandomInt(0, rpc.length - 1)],
+        expireInSeconds: 60,
+        broadcast: true,
+        verbose: false,
+        sign: true
     });
 }
 

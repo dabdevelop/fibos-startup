@@ -1,20 +1,13 @@
+// 在 key.json 文件里替换成你的公钥和私钥
 // 私钥：5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP
 // 公钥：FO7sGkRxL2AFnqBdUHXKC2LziYeRTzsxYF7FjzFNGe14hV8U5Pi2
+
 // Fibos密钥对生成工具地址：https://fibos.xyz/
 
-var FIBOS = require('fibos.js');
+var FIBOS = require('./initClient.js');
+var client = FIBOS();
 
-// 替换 keyProvider 为你的私钥
-var fibos = FIBOS({
-	chainId: "6aa7bd33b6b45192465afa3553dedb531acaaff8928cf64b70bd4c5e49b7ec6a",
-	keyProvider: "5JYXp9cSWQizUXLw5K2sGGD8Mr6pHAjpcRk7xrHkY5zaPwXRppP",
-	httpEndpoint: "http://se-rpc.fibos.io:8870",
-	logger: {
-		log: null,
-		error: null
-	}
-});
-var ctx = fibos.contractSync("eosio");
+var ctx = client.contractSync("eosio");
 // 替换 fibosamerica 为你的账号名
 var rs = ctx.claimrewardsSync("fibosamerica");
 console.log(rs);
