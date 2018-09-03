@@ -15,8 +15,6 @@ var stakeCPU = 10;
 var FIBOS = require('./initClient.js');
 var client = FIBOS();
 
-var client = FIBOS(config);
-
 client.transaction(tr => {
     tr.delegatebw({
       from: account,
