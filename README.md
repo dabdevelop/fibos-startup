@@ -6,10 +6,16 @@
 
 ### 前提
 
-前提是安装了[Fibos](https://fibos.io/docs/guide/basic/install.md.html)，快速安装：
+前提是安装了[Fibos](https://fibos.io/docs/guide/basic/install.md.html) 和安装了 `fibos.js`，快速安装`Fibos`：
 
 ```bash
     curl -s https://fibos.io/download/installer.sh |sh
+```
+
+在此工程目录下，安装 `fibos.js`
+
+```bash
+    npm i fibos.js
 ```
 
 ### 使用方法
