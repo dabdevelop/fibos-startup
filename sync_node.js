@@ -20,7 +20,14 @@ fibos.load("net", {
         "to-p2p.fibos.io:9870",
         "ca-p2p.fibos.io:9870",
         "ln-p2p.fibos.io:9870",
-        "va-p2p.fibos.io:9870"
+        "va-p2p.fibos.io:9870",
+        "fibos-p2p.slowmist.io:9870",  // slowmistioio
+        "fibos.qubitfund.com:9870",  // williamfouvy
+        "p2p.mainnet.fibos.me:80",  // fibtothemoon 
+        "p2p.eoschina.me:10300",  // fotothemooon 
+        "p2p.foshenzhenbp.com:9877",  // foshenzhenbp
+        "seed-mainnet.fibscan.io:9103",  // fibscandotio
+        "p2p-mainnet.fibos123.com:9977"  // fibos123comm
     ] 
 });
 
