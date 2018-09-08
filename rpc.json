@@ -1,14 +1,11 @@
 [   
     "http://se-rpc.fibos.io:8870",
-    "http://sl-rpc.fibos.io:8870",
     "http://to-rpc.fibos.io:8870",
     "http://ca-rpc.fibos.io:8870",
-    "http://ln-rpc.fibos.io:8870",
     "http://va-rpc.fibos.io:8870",
     "http://api.fibos.xyz",
     "http://rpc-mainnet.fibos123.com",
     "http://api.fibos.rocks",
-    "http://api.eoschina.me",
     "http://api.foshenzhenbp.com:8888",
     "http://api.fibos.me"
 ]
