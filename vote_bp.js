@@ -12,5 +12,5 @@ var client = FIBOS();
 var ctx = client.contractSync("eosio");
 // 替换 xxxxxaccount 为你的账号名
 // 第三个参数是您投票的节点，如果是多个节点，需要按照字母排序，如果字母一样，比较后一位，以此类推
-var rs = ctx.voteproducerSync("xxxxxaccount", "", ["beedappchina", "fibos123comm", "fibosamerica", "fibosrockskr", "fibossalonbp", "universalbi1","foshenzhenbp","plasmatfibos","fotothemooon"].sort());
+var rs = ctx.voteproducerSync("xxxxxaccount", "", ["beedappchina", "fibos123comm", "fibosamerica", "fibosrockskr", "fibossalonbp", "universalbi1","foshenzhenbp","plasmatfibos","fotothemooon", "liuqiangdong"].sort());
 console.log(rs);
